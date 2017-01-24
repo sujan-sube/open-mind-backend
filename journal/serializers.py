@@ -3,6 +3,8 @@ from rest_framework import serializers
 from journal.models import Journal
 
 class JournalSerializer(serializers.ModelSerializer):
+  user = serializers.StringRelatedField(many=False)
+
   class Meta:
     model = Journal
-    fields = ('date', 'content')
+    fields = ('user', 'date', 'content')
