@@ -18,6 +18,6 @@ sys.path.append(project)
 
 # Add the path to 3rd party django application and to django itself.
 sys.path.append('/home/ubuntu')
-os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.apache.override'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'openmind.settings'
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
