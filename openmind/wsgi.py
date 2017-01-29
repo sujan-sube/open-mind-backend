@@ -18,6 +18,7 @@ site.addsitedir(site_packages)
 
 
 import os, sys
+from django.core.wsgi import get_wsgi_application
 
 # Calculate the path based on the location of the WSGI script.
 apache_configuration= os.path.dirname(__file__)
@@ -29,5 +30,4 @@ sys.path.append(project)
 # Add the path to 3rd party django application and to django itself.
 sys.path.append('/home/ubuntu')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'openmind.settings'
-import django.core.handlers.wsgi
-application = django.core.handlers.wsgi.WSGIHandler()
+application = get_wsgi_application()
