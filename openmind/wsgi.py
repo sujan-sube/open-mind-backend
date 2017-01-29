@@ -7,6 +7,16 @@ For more information on this file, see
 https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 """
 
+import site
+
+# to setup virtual environment
+python_home = '/home/ubuntu/open-mind-backend/venv'
+site_packages = python_home + '/lib/python3.5/site-packages'
+
+site.addsitedir(site_packages)
+
+
+
 import os, sys
 
 # Calculate the path based on the location of the WSGI script.
