@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
     'journal'
 ]
 
@@ -125,7 +131,19 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # global settings for rest framework
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAdminUser',
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
     ],
     'PAGE_SIZE': 10
 }
+
+# setting for django rest-auth
+SITE_ID = 1
+
+# setting to make email verification emails to go to console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# disable session login, only keep rest-auth token based login
+REST_SESSION_LOGIN = False
