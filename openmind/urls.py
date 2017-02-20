@@ -17,14 +17,21 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 from journal import views
+from journal.views_social import GoogleLogin
 
 router = routers.DefaultRouter()
 router.register(r'journal', views.JournalViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    # browser login - disable after development
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^admin/', admin.site.urls),
+
+    # api auth
     url(r'^rest-auth/', include('rest_auth.urls')),
-    url(r'^rest-auth/registration/', include('rest_auth.registration.urls'))
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^rest-auth/google/$', GoogleLogin.as_view(), name='google_login'),
+
+    # admin pages
+    url(r'^admin/', admin.site.urls)
 ]
