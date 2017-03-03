@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
     'rest_auth.registration',
     'rest_framework',
     'rest_framework.authtoken',
@@ -147,3 +149,18 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # disable session login, only keep rest-auth token based login
 REST_SESSION_LOGIN = False
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+
+# Google Social Auth
+GOOGLE_AUTH_CALLBACK_URL = 'http://127.0.0.1:8000/'
