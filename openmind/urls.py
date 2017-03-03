@@ -24,8 +24,8 @@ router.register(r'journal', views.JournalViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
-    # browser login - disable after development
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # browser login - can be disabled
+    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     # api auth
     url(r'^rest-auth/', include('rest_auth.urls')),
