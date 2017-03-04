@@ -1,6 +1,6 @@
 # from django.contrib.auth.models import User
 from rest_framework import viewsets, status
-from rest_framework.decorators import detail_route
+# from rest_framework.decorators import detail_route
 from rest_framework.response import Response
 from journal.serializers import JournalSerializer
 from journal.models import Journal

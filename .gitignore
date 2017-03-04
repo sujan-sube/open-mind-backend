@@ -93,3 +93,6 @@ ENV/
 
 # static files
 static/
+
+# media files
+media/

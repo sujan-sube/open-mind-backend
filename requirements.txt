@@ -4,6 +4,8 @@ django-allauth==0.30.0
 django-rest-auth==0.9.0
 djangorestframework==3.5.3
 oauthlib==2.0.1
+olefile==0.44
+Pillow==4.0.0
 python3-openid==3.0.10
 requests==2.13.0
 requests-oauthlib==0.7.0
