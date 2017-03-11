@@ -2,6 +2,7 @@
 from rest_framework import viewsets, status
 # from rest_framework.decorators import detail_route
 from rest_framework.response import Response
+from rest_framework.renderers import JSONRenderer
 from journal.serializers import JournalSerializer
 from journal.models import Journal
 
@@ -18,7 +19,8 @@ class JournalViewSet(viewsets.ModelViewSet):
     def list(self, request):
       queryset = Journal.objects.all().order_by('-date').values('date', 'id', 'user', 'content', 'analysis')
       serializer = self.get_serializer(queryset, many=True)
-      return Response(serializer.data)
+      json = JSONRenderer().render(serializer.data)
+      return Response(json)
 
     def create(self, request):
       serializer = self.get_serializer(data=request.data)

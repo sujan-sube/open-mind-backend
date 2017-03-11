@@ -17,3 +17,4 @@ class EmotionViewSet(viewsets.ModelViewSet):
       serializer = self.get_serializer(queryset, many=True)
       print(serializer.data)
       return Response(serializer.data)
+    
