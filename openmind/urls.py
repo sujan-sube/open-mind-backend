@@ -16,11 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
-from journal import views
+from journal.views import JournalViewSet
+from emotion.views import EmotionViewSet
 from journal.views_social import GoogleLogin
 
 router = routers.DefaultRouter()
-router.register(r'journal', views.JournalViewSet)
+router.register(r'journal', JournalViewSet)
+router.register(r'emotion', EmotionViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
