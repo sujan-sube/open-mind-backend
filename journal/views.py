@@ -16,7 +16,7 @@ class JournalViewSet(viewsets.ModelViewSet):
     serializer_class = JournalSerializer
 
     def list(self, request):
-      queryset = Journal.objects.all().order_by('-date').values('date', 'id', 'user', 'content', 'analysis')
+      queryset = Journal.objects.all().order_by('-date').values('date', 'id', 'user', 'content', 'analysis', 'analysis_comment')
       serializer = self.get_serializer(queryset, many=True)
       data_to_json = { "result": serializer.data }
       return Response(data_to_json)
@@ -27,8 +27,8 @@ class JournalViewSet(viewsets.ModelViewSet):
       if serializer.is_valid():
         # obtain score from micrsoft text analytics
         score = textanalysis(request.data['content'])
-
-        serializer.save(user=self.request.user, analysis=score)
+        comment = scoreToComment(score)
+        serializer.save(user=self.request.user, analysis=score, analysis_comment=comment)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
       else:
@@ -66,3 +66,18 @@ def textanalysis(content):
       print("[Errno {0}] {1}".format(e.errno, e.strerror))
 
   return score
+
+def scoreToComment(score):
+  if score >= 0 and score < 0.2 :
+    comment = "Very Unhappy"
+  elif score >= 0.2 and score < 0.4 :
+    comment = "Unhappy"
+  elif score >= 0.4 and score < 0.6 :
+    comment = "Neutral"
+  elif score >= 0.6 and score < 0.8 :
+    comment = "Happy" 
+  elif score >= 0.8 and score <= 1.0 :
+    comment = "Very Happy"
+  else:
+    comment = None
+  return comment
