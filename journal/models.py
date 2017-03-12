@@ -9,5 +9,5 @@ class Journal(models.Model):
   date = models.DateTimeField(default=timezone.now)
   content = models.TextField()
   analysis = models.DecimalField(max_digits=10, decimal_places=8, null=True)
-
+  analysis_comment = models.TextField(null=True)
   

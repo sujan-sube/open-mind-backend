@@ -7,4 +7,4 @@ class JournalSerializer(serializers.ModelSerializer):
 
   class Meta:
     model = Journal
-    fields = ('user', 'date', 'content', 'analysis')
+    fields = ('user', 'date', 'content', 'analysis', 'analysis_comment')
