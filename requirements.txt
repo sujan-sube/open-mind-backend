@@ -2,6 +2,8 @@ defusedxml==0.4.1
 Django==1.10.5
 django-allauth==0.30.0
 django-autofixture==0.12.1
+django-crispy-forms==1.6.1
+django-filter==1.0.1
 django-rest-auth==0.9.0
 djangorestframework==3.5.3
 oauthlib==2.0.1
