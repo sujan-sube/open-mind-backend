@@ -4,7 +4,9 @@
 ### 1. Google Login
 #### Endpoint: `/rest-auth/google/`
 Methods: `[Post]`
+
 Request Header: `None`
+
 Request Body: 
 ```javascript
 { 
@@ -12,6 +14,7 @@ Request Body:
     "code": "{serverAuthCode}"
 }
 ```
+
 Response:
 ```javascript
 { 
@@ -21,7 +24,9 @@ Response:
 ### 2. Local Registration
 #### Endpoint: `/rest-auth/registration/`
 Methods: `[Post]`
+
 Request Header: `None`
+
 Request Body: 
 ```javascript
 { 
@@ -39,7 +44,9 @@ Response:
 ### 3. Local Login
 #### Endpoint: `/rest-auth/login/`
 Methods: `[Post]`
+
 Request Header: `None`
+
 Request Body: 
 ```javascript
 { 
@@ -57,11 +64,13 @@ Response:
 #### Endpoint: `/rest-auth/user/`
 **! Requires Authenticated User**
 Methods: `[Get]`
+
 Request Header:
 ```
 Authorization: Token {Token}
 ```
 Request Body: `None`
+
 Response:
 ```javascript
 { 
@@ -75,12 +84,15 @@ Response:
 ### 4. Journal
 #### Endpoint: `/journal/`
 **! Requires Authenticated User**
+
 Methods: `[Get, Post]`
+
 Request Header `[Get, Post]`:
 ```javascript
 Authorization: Token {Token}
 ```
 Request Body `[Get]`: `None`
+
 Request Response `[Get]`:
 ```javascript
 {
@@ -111,13 +123,17 @@ Response `[Post]`:
 ```
 #### Endpoint: `/journal/?date={date}`
 **! Requires Authenticated User**
+
 **{date} format: YYYY-MM-DD**
+
 Methods: `[Get]`
+
 Request Header:
 ```javascript
 Authorization: Token {Token}
 ```
 Request Body: `None`
+
 Request Response:
 ```javascript
 {
