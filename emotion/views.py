@@ -15,5 +15,7 @@ class EmotionViewSet(viewsets.ModelViewSet):
     def list(self, request):
       queryset = Emotion.objects.all().order_by('-date').values('date', 'id', 'url', 'user')
       serializer = self.get_serializer(queryset, many=True)
+      data_to_json = { "result": serializer.data }
       print(serializer.data)
-      return Response(serializer.data)
+      return Response(data_to_json)
+    
