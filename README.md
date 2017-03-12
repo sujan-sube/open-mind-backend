@@ -6,14 +6,14 @@
 Methods: `[Post]`
 Request Header: `None`
 Request Body: 
-```json
+```javascript
 { 
     "access_token": "",
     "code": "{serverAuthCode}"
 }
 ```
 Response:
-```json
+```javascript
 { 
     "key": "{token}"
 }
@@ -23,7 +23,7 @@ Response:
 Methods: `[Post]`
 Request Header: `None`
 Request Body: 
-```json
+```javascript
 { 
     "username": "{username}",
     "password1": "{password}",
@@ -31,7 +31,7 @@ Request Body:
 }
 ```
 Response:
-```json
+```javascript
 { 
     "key": "{token}"
 }
@@ -41,14 +41,14 @@ Response:
 Methods: `[Post]`
 Request Header: `None`
 Request Body: 
-```json
+```javascript
 { 
     "username": "{username}",
     "password": "{password}"
 }
 ```
 Response:
-```json
+```javascript
 { 
     "key": "{token}"
 }
@@ -63,7 +63,7 @@ Authorization: Token {Token}
 ```
 Request Body: `None`
 Response:
-```json
+```javascript
 { 
     "pk": {primary key},
     "username": "{username}",
@@ -77,12 +77,12 @@ Response:
 **! Requires Authenticated User**
 Methods: `[Get, Post]`
 Request Header `[Get, Post]`:
-```json
+```javascript
 Authorization: Token {Token}
 ```
 Request Body `[Get]`: `None`
 Request Response `[Get]`:
-```json
+```javascript
 {
     "count": {number of items},
     "next": "{url to next page}",
@@ -93,14 +93,14 @@ Request Response `[Get]`:
 }
 ```
 Request Body `[Post]`:
-```json
+```javascript
 { 
     "date": {date},
     "content": {content}
 }
 ```
 Response `[Post]`:
-```json
+```javascript
 {
     "user": "{user primary key}",
     "date": "{date}",
@@ -114,12 +114,12 @@ Response `[Post]`:
 **{date} format: YYYY-MM-DD**
 Methods: `[Get]`
 Request Header:
-```json
+```javascript
 Authorization: Token {Token}
 ```
 Request Body: `None`
 Request Response:
-```json
+```javascript
 {
     "count": {number of items},
     "next": "{url to next page}",
