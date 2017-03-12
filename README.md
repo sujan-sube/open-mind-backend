@@ -8,14 +8,14 @@ Request Header: `None`
 Request Body: 
 ```json
 { 
-    access_token = "",
-    code = "{serverAuthCode}"
+    "access_token": "",
+    "code": "{serverAuthCode}"
 }
 ```
 Response:
 ```json
 { 
-    key = "{token}"
+    "key": "{token}"
 }
 ```
 ### 2. Local Registration
@@ -25,15 +25,15 @@ Request Header: `None`
 Request Body: 
 ```json
 { 
-    username = "{username}",
-    password1 = "{password}",
-    password2 = "{password}"
+    "username": "{username}",
+    "password1": "{password}",
+    "password2": "{password}"
 }
 ```
 Response:
 ```json
 { 
-    key = "{token}"
+    "key": "{token}"
 }
 ```
 ### 3. Local Login
@@ -43,14 +43,14 @@ Request Header: `None`
 Request Body: 
 ```json
 { 
-    username = "{username}",
-    password = "{password}"
+    "username": "{username}",
+    "password": "{password}"
 }
 ```
 Response:
 ```json
 { 
-    key = "{token}"
+    "key": "{token}"
 }
 ```
 ### 4. User Profile
@@ -58,7 +58,7 @@ Response:
 **! Requires Authenticated User**
 Methods: `[Get]`
 Request Header:
-```json
+```
 Authorization: Token {Token}
 ```
 Request Body: `None`
@@ -95,8 +95,8 @@ Request Response `[Get]`:
 Request Body `[Post]`:
 ```json
 { 
-    date = {date},
-    content = {content}
+    "date": {date},
+    "content": {content}
 }
 ```
 Response `[Post]`:
