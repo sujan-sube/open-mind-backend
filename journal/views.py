@@ -65,7 +65,7 @@ def textanalysis(content):
       conn = http.client.HTTPSConnection('westus.api.cognitive.microsoft.com')
       conn.request("POST", "/text/analytics/v2.0/sentiment?%s" % params, str(body), headers)
       response = conn.getresponse()
-      data = response.read()
+      data = response.read().decode('utf8')
       parsedData = json.loads(data)
       score = parsedData['documents'][0]['score']
       conn.close()
