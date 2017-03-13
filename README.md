@@ -146,6 +146,25 @@ Request Response:
 }
 ```
 
+## Django Fixtures
+Django fixtures saves the contents of a database into a json file. The json file can then be loaded to restore the data to the database.
+
+### Create Fixtures
+Run the following command to dump the data of a specific app to a json file.
+`python manage.py dumpdata --format=json myapp > /path/to/myapp/fixtures/myapp_test.json`
+
+### Load Fixtures
+Run the following command to load the data from a json file. Django will search the entire project for a json matching the provided argument.
+`python manage.py loaddata myapp_test`
+
+### Clear Database
+To clear the data for a specific app use the following commands:
+1. `python manage.py migrate myapp zero`
+2. `python manage.py migrate`
+
+To clear the data from the entire database (all apps) use the following command:
+`python manage.py flush`
+
 ## Generating Test Data
 The command to create test data is in the format:
 - `python manage.py loadtestdata app.Model:#`

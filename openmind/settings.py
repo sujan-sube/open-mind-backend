@@ -177,3 +177,8 @@ SOCIALACCOUNT_PROVIDERS = {
 
 # Google Social Auth
 GOOGLE_AUTH_CALLBACK_URL = 'http://127.0.0.1:8000/'
+
+# fixtures settings
+FIXTURE_DIRS = (
+   '/journal/fixtures/',
+)
