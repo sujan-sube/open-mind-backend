@@ -63,6 +63,7 @@ Response:
 ### 4. User Profile
 #### Endpoint: `/rest-auth/user/`
 **! Requires Authenticated User**
+
 Methods: `[Get]`
 
 Request Header:
@@ -81,7 +82,7 @@ Response:
     "last_name": "{last name}"
 }
 ```
-### 4. Journal
+### 5. Journal
 #### Endpoint: `/journal/`
 **! Requires Authenticated User**
 
