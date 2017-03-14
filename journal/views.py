@@ -17,13 +17,15 @@ class JournalViewSet(viewsets.ModelViewSet):
     serializer_class = JournalSerializer
     filter_backends = (filters.DjangoFilterBackend,)
     filter_class = JournalFilter
+
     # def list(self, request):
     #   serializer = self.get_serializer(queryset, many=True)
     #   data_to_json = { "result": serializer.data }
     #   return Response(data_to_json)
 
     def get_queryset(self):
-      return Journal.objects.order_by('-date').values('date', 'id', 'user', 'content', 'analysis', 'analysis_comment')
+      queryset = Journal.objects.filter(user=self.request.user)
+      return queryset.order_by('-date').values('date', 'id', 'user', 'content', 'analysis', 'analysis_comment')
 
     def create(self, request):
       serializer = self.get_serializer(data=request.data)
