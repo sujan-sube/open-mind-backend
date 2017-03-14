@@ -7,4 +7,4 @@ class EmotionSerializer(serializers.ModelSerializer):
 
   class Meta:
     model = Emotion
-    fields = ('user', 'date', 'url')
+    fields = ('user', 'date', 'image')

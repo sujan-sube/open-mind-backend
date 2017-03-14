@@ -12,10 +12,23 @@ class EmotionViewSet(viewsets.ModelViewSet):
     queryset = Emotion.objects.all().order_by('-date')
     serializer_class = EmotionSerializer
 
-    def list(self, request):
-      queryset = Emotion.objects.all().order_by('-date').values('date', 'id', 'url', 'user')
-      serializer = self.get_serializer(queryset, many=True)
-      data_to_json = { "result": serializer.data }
-      print(serializer.data)
-      return Response(data_to_json)
+    def get_queryset(self):
+      queryset = Emotion.objects.filter(user=self.request.user)
+      return queryset.order_by('-date').values('date', 'id', 'image', 'user')
+
+    def create(self, request):
+      serializer = self.get_serializer(data=request.data)
+
+      if serializer.is_valid():
+        # obtain analysis from microsoft emotion api
+        # analysis = emotionanalysis(request.data['image'])
+        serializer.save(user=self.request.user)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+      else:
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+
+
+def emotionanalysis(image):
+  pass

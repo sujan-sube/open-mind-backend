@@ -6,7 +6,7 @@ from django.db.models import SET_NULL, CASCADE
 class Emotion(models.Model):
   id = models.AutoField(primary_key=True)
   user = models.ForeignKey('auth.User', null=True, default=None, on_delete=SET_NULL)
-  url = models.ImageField(upload_to='images', height_field=None, width_field=None, max_length=100)
+  image = models.ImageField(upload_to='images', height_field=None, width_field=None, max_length=100)
   date = models.DateTimeField(default=timezone.now)
 
 class Expression(models.Model):
