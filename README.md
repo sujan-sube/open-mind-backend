@@ -145,6 +145,30 @@ Request Response:
     ]
 }
 ```
+#### Endpoint: `/journal/?daterange_0={date}&daterange_1={date}`
+**! Requires Authenticated User**
+
+**{date} format: YYYY-MM-DD**
+
+Methods: `[Get]`
+
+Request Header:
+```javascript
+Authorization: Token {Token}
+```
+Request Body: `None`
+
+Request Response:
+```javascript
+{
+    "count": {number of items},
+    "next": "{url to next page}",
+    "previous": "{url to next page}",
+    "results": [
+        {array of journal entries}
+    ]
+}
+```
 
 ## Django Fixtures
 Django fixtures saves the contents of a database into a json file. The json file can then be loaded to restore the data to the database.
