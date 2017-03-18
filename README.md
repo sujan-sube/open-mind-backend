@@ -63,6 +63,7 @@ Response:
 ### 4. User Profile
 #### Endpoint: `/rest-auth/user/`
 **! Requires Authenticated User**
+
 Methods: `[Get]`
 
 Request Header:
@@ -81,7 +82,7 @@ Response:
     "last_name": "{last name}"
 }
 ```
-### 4. Journal
+### 5. Journal
 #### Endpoint: `/journal/`
 **! Requires Authenticated User**
 
@@ -175,7 +176,7 @@ Django fixtures saves the contents of a database into a json file. The json file
 
 ### Create Fixtures
 Run the following command to dump the data of a specific app to a json file.
-- `python manage.py dumpdata --format=json myapp > /path/to/myapp/fixtures/myapp_test.json`
+- `python manage.py dumpdata --format json --indent 4 myapp > /path/to/myapp/fixtures/myapp_test.json`
 
 ### Load Fixtures
 Run the following command to load the data from a json file. Django will search the entire project for a json matching the provided argument.
