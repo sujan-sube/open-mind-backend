@@ -1,1 +1,222 @@
-[{"model": "journal.journal", "pk": 6, "fields": {"user": 1, "date": "1942-06-14T12:00:00Z", "content": "On Friday, June 12, I was awake at six o'clock, which isn't surprising, since it was my birthday. But I'm not allowed to get up at that hour, so I had to control my curiosity until quarter to seven. When I couldn't wait any longer, I went to the dining room, where Moortje (the cat) welcomed me by rubbing against my legs.", "analysis": "0.03668673", "analysis_comment": "Very Unhappy"}}, {"model": "journal.journal", "pk": 7, "fields": {"user": 1, "date": "1942-06-15T12:00:00Z", "content": "Betty Bloemendaal looks kind of poor, and I think she probably is. She lives on some obscure street in West Amsterdam, and none of us know where it is. She does very well at school, but that's because she works so hard, not because she's so smart. She's pretty quiet.", "analysis": "0.03756048", "analysis_comment": "Very Unhappy"}}, {"model": "journal.journal", "pk": 8, "fields": {"user": 1, "date": "1942-06-15T14:00:00Z", "content": "Henny Mets is a nice girl with a cheerful disposition, except that she talks in a loud voice and is really childish when we're playing outdoors. Unfortunately, Henny has a girlfriend named Beppy who's a bad influence on her because she's dirty and vulgar.", "analysis": "0.14219420", "analysis_comment": "Very Unhappy"}}, {"model": "journal.journal", "pk": 9, "fields": {"user": 1, "date": "1942-06-20T12:00:00Z", "content": "Let me put it more clearly, since no one will believe that a thirteen year-old girl is completely alone in the world. And I'm not. I have loving parents and a sixteen-year-old sister, and there are about thirty people I can call friends.", "analysis": "0.60119850", "analysis_comment": "Happy"}}, {"model": "journal.journal", "pk": 10, "fields": {"user": 1, "date": "1942-06-20T14:00:00Z", "content": "To enhance the image of this long-awaited friend in my imagination, I don't want to jot down the facts in this diary the way most people would do, but I want the diary to be my friend, and I'm going to call this friend Kitty.", "analysis": "0.33598030", "analysis_comment": "Unhappy"}}, {"model": "journal.journal", "pk": 11, "fields": {"user": 1, "date": "1942-06-20T20:00:00Z", "content": "You're probably a little surprised to hear me talking about admirers at such a tender age. Unfortunately, or not, as the case may be, this vice seems to be rampant at our school. As soon as a boy asks if he can bicycle home with me and we get to talking, nine times out of ten I can be sure he'll become enamored on the spot and won't let me out of his sight for a second.", "analysis": "0.92533830", "analysis_comment": "Very Happy"}}, {"model": "journal.journal", "pk": 12, "fields": {"user": 1, "date": "1942-06-21T20:00:00Z", "content": "Our entire class is quaking in its boots. The reason, of course, is the upcoming meeting in which the teachers decide who'll be promoted to the next grade and who'll be kept back. Half the class is making bets. G.Z. and I laugh ourselves sick at the two boys behind us, C.N. and Jacques Kocernoot, who have staked their entire vacation savings on their bet.", "analysis": "0.74961600", "analysis_comment": "Happy"}}, {"model": "journal.journal", "pk": 13, "fields": {"user": 1, "date": "1942-06-24T12:00:00Z", "content": "It's sweltering. Everyone is huffing and puffing, and in this heat I have to walk everywhere. Only now do I realize how pleasant a streetcar is, but we Jews are no longer allowed to make use of this luxury; our own two feet are good enough for us.", "analysis": "0.06252395", "analysis_comment": "Very Unhappy"}}, {"model": "journal.journal", "pk": 14, "fields": {"user": 1, "date": "1942-07-01T12:00:00Z", "content": "Monday evening Hello came over to meet Father and Mother. I had bought a cake and some candy, and we had tea and cookies, the works, but neither Hello nor I felt like sitting stiffly on our chairs. So we went out for a walk, and he didn't deliver me to my door until ten past eight.", "analysis": "0.89437140", "analysis_comment": "Very Happy"}}, {"model": "journal.journal", "pk": 15, "fields": {"user": 1, "date": "1942-07-05T12:00:00Z", "content": "Father has been home a lot lately. There's nothing for him to do at the office; it must be awful to feel you're not needed. Mr. Kleiman has taken over Opekta, and Mr. Kugler, Gies & Co., the company dealing in spices and spice substitutes that was set up in 1941.", "analysis": "0.09679180", "analysis_comment": "Very Unhappy"}}, {"model": "journal.journal", "pk": 16, "fields": {"user": 1, "date": "1942-07-09T12:00:00Z", "content": "So there we were, Father, Mother and I, walking in the pouring rain, each of us with a schoolbag and a shopping bag filled to the brim with the most varied assortment of items. The people on their way to work at that early hour gave us sympathetic looks; you could tell by their faces that they were sorry they couldn't offer us some kind of transportation; the conspicuous yellow star spoke for itself.", "analysis": "0.36292690", "analysis_comment": "Unhappy"}}, {"model": "journal.journal", "pk": 17, "fields": {"user": 1, "date": "1942-07-10T12:00:00Z", "content": "All day long we unpacked boxes, filled cupboards, hammered nails and straightened up the mess, until we fell exhausted into our clean beds at night. We hadn't eaten a hot meal all day, but we didn't care; Mother and Margot were too tired and keyed up to eat, and Father and I were too busy", "analysis": "0.28762400", "analysis_comment": "Unhappy"}}, {"model": "journal.journal", "pk": 18, "fields": {"user": 1, "date": "1942-07-11T12:00:00Z", "content": "I'm looking forward to the arrival of the van Daans, which is set for Tuesday. It will be much more fun and also not as quiet. You see, it's the silence that makes me so nervous during the evenings and nights, and I'd give anything to have one of our helpers sleep here.", "analysis": "0.39024430", "analysis_comment": "Unhappy"}}, {"model": "journal.journal", "pk": 19, "fields": {"user": 1, "date": "1942-07-14T12:00:00Z", "content": "Much to our amusement, Mrs. van Daan was carrying a hatbox with a large chamber pot inside. \"I just don't feel at home without my chamber pot,\" she exclaimed, and it was the first item to find a permanent place under the divan.", "analysis": "0.44005470", "analysis_comment": "Neutral"}}, {"model": "journal.journal", "pk": 20, "fields": {"user": 1, "date": "1942-09-27T12:00:00Z", "content": "It's so funny to see how quickly Mrs. van Daan flushes. I don't, and it secredy annoys her no end.", "analysis": "0.68656870", "analysis_comment": "Happy"}}, {"model": "journal.journal", "pk": 21, "fields": {"user": 1, "date": "1942-10-01T12:00:00Z", "content": "Yesterday I had a horrible fright. At eight o'clock the doorbell suddenly rang. All I could think of was that someone was coming to get us, you know who I mean. But I calmed down when everybody swore it must have been either pranksters or the mailman.", "analysis": "0.04816964", "analysis_comment": "Very Unhappy"}}, {"model": "journal.journal", "pk": 22, "fields": {"user": 1, "date": "1942-10-03T12:00:00Z", "content": "Everybody teased me quite a bit yesterday because I lay down on the bed next to Mr. van Daan. \"At your age! Shocking! \" and other remarks along those lines. Silly, of course. I'd never want to sleep with Mr. van Daan the way they mean.", "analysis": "0.85072600", "analysis_comment": "Very Happy"}}, {"model": "journal.journal", "pk": 23, "fields": {"user": 1, "date": "1942-10-14T12:00:00Z", "content": "I'm terribly busy. Yesterday I began by translating a chapter from La Belle Nivemaise and writing down vocabulary words. Then I worked on an awful math problem and translated three pages of French grammar besides. Today, French grammar and history. I simply refuse to do that wretched math every day. Daddy thinks it's awful too.", "analysis": "0.06149819", "analysis_comment": "Very Unhappy"}}, {"model": "journal.journal", "pk": 24, "fields": {"user": 1, "date": "1942-10-29T12:00:00Z", "content": "I'm very worried. Father's sick. He's covered with spots and has a high temperature. It looks like measles. Just think, we can't even call a doctor! Mother is making him perspire in hopes of sweating out the fever.", "analysis": "0.05520451", "analysis_comment": "Very Unhappy"}}, {"model": "journal.journal", "pk": 25, "fields": {"user": 1, "date": "1942-11-20T12:00:00Z", "content": "No matter what I'm doing, I can't help thinking about those who are gone. I catch myself laughing and remember that it's a disgrace to be so cheerful. But am I supposed to spend the whole day crying? No, I can't do that. This gloom will pass.", "analysis": "0.04109347", "analysis_comment": "Very Unhappy"}}]
+[
+{
+    "model": "journal.journal",
+    "pk": 6,
+    "fields": {
+        "user": 2,
+        "date": "1942-06-14T12:00:00Z",
+        "content": "On Friday, June 12, I was awake at six o'clock, which isn't surprising, since it was my birthday. But I'm not allowed to get up at that hour, so I had to control my curiosity until quarter to seven. When I couldn't wait any longer, I went to the dining room, where Moortje (the cat) welcomed me by rubbing against my legs.",
+        "analysis": "0.03668673",
+        "analysis_comment": "Very Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 7,
+    "fields": {
+        "user": 2,
+        "date": "1942-06-15T12:00:00Z",
+        "content": "Betty Bloemendaal looks kind of poor, and I think she probably is. She lives on some obscure street in West Amsterdam, and none of us know where it is. She does very well at school, but that's because she works so hard, not because she's so smart. She's pretty quiet.",
+        "analysis": "0.03756048",
+        "analysis_comment": "Very Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 8,
+    "fields": {
+        "user": 2,
+        "date": "1942-06-15T14:00:00Z",
+        "content": "Henny Mets is a nice girl with a cheerful disposition, except that she talks in a loud voice and is really childish when we're playing outdoors. Unfortunately, Henny has a girlfriend named Beppy who's a bad influence on her because she's dirty and vulgar.",
+        "analysis": "0.14219420",
+        "analysis_comment": "Very Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 9,
+    "fields": {
+        "user": 2,
+        "date": "1942-06-20T12:00:00Z",
+        "content": "Let me put it more clearly, since no one will believe that a thirteen year-old girl is completely alone in the world. And I'm not. I have loving parents and a sixteen-year-old sister, and there are about thirty people I can call friends.",
+        "analysis": "0.60119850",
+        "analysis_comment": "Happy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 10,
+    "fields": {
+        "user": 2,
+        "date": "1942-06-20T14:00:00Z",
+        "content": "To enhance the image of this long-awaited friend in my imagination, I don't want to jot down the facts in this diary the way most people would do, but I want the diary to be my friend, and I'm going to call this friend Kitty.",
+        "analysis": "0.33598030",
+        "analysis_comment": "Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 11,
+    "fields": {
+        "user": 2,
+        "date": "1942-06-20T20:00:00Z",
+        "content": "You're probably a little surprised to hear me talking about admirers at such a tender age. Unfortunately, or not, as the case may be, this vice seems to be rampant at our school. As soon as a boy asks if he can bicycle home with me and we get to talking, nine times out of ten I can be sure he'll become enamored on the spot and won't let me out of his sight for a second.",
+        "analysis": "0.92533830",
+        "analysis_comment": "Very Happy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 12,
+    "fields": {
+        "user": 2,
+        "date": "1942-06-21T20:00:00Z",
+        "content": "Our entire class is quaking in its boots. The reason, of course, is the upcoming meeting in which the teachers decide who'll be promoted to the next grade and who'll be kept back. Half the class is making bets. G.Z. and I laugh ourselves sick at the two boys behind us, C.N. and Jacques Kocernoot, who have staked their entire vacation savings on their bet.",
+        "analysis": "0.74961600",
+        "analysis_comment": "Happy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 13,
+    "fields": {
+        "user": 2,
+        "date": "1942-06-24T12:00:00Z",
+        "content": "It's sweltering. Everyone is huffing and puffing, and in this heat I have to walk everywhere. Only now do I realize how pleasant a streetcar is, but we Jews are no longer allowed to make use of this luxury; our own two feet are good enough for us.",
+        "analysis": "0.06252395",
+        "analysis_comment": "Very Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 14,
+    "fields": {
+        "user": 2,
+        "date": "1942-07-01T12:00:00Z",
+        "content": "Monday evening Hello came over to meet Father and Mother. I had bought a cake and some candy, and we had tea and cookies, the works, but neither Hello nor I felt like sitting stiffly on our chairs. So we went out for a walk, and he didn't deliver me to my door until ten past eight.",
+        "analysis": "0.89437140",
+        "analysis_comment": "Very Happy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 15,
+    "fields": {
+        "user": 2,
+        "date": "1942-07-05T12:00:00Z",
+        "content": "Father has been home a lot lately. There's nothing for him to do at the office; it must be awful to feel you're not needed. Mr. Kleiman has taken over Opekta, and Mr. Kugler, Gies & Co., the company dealing in spices and spice substitutes that was set up in 1941.",
+        "analysis": "0.09679180",
+        "analysis_comment": "Very Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 16,
+    "fields": {
+        "user": 2,
+        "date": "1942-07-09T12:00:00Z",
+        "content": "So there we were, Father, Mother and I, walking in the pouring rain, each of us with a schoolbag and a shopping bag filled to the brim with the most varied assortment of items. The people on their way to work at that early hour gave us sympathetic looks; you could tell by their faces that they were sorry they couldn't offer us some kind of transportation; the conspicuous yellow star spoke for itself.",
+        "analysis": "0.36292690",
+        "analysis_comment": "Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 17,
+    "fields": {
+        "user": 2,
+        "date": "1942-07-10T12:00:00Z",
+        "content": "All day long we unpacked boxes, filled cupboards, hammered nails and straightened up the mess, until we fell exhausted into our clean beds at night. We hadn't eaten a hot meal all day, but we didn't care; Mother and Margot were too tired and keyed up to eat, and Father and I were too busy",
+        "analysis": "0.28762400",
+        "analysis_comment": "Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 18,
+    "fields": {
+        "user": 2,
+        "date": "1942-07-11T12:00:00Z",
+        "content": "I'm looking forward to the arrival of the van Daans, which is set for Tuesday. It will be much more fun and also not as quiet. You see, it's the silence that makes me so nervous during the evenings and nights, and I'd give anything to have one of our helpers sleep here.",
+        "analysis": "0.39024430",
+        "analysis_comment": "Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 19,
+    "fields": {
+        "user": 2,
+        "date": "1942-07-14T12:00:00Z",
+        "content": "Much to our amusement, Mrs. van Daan was carrying a hatbox with a large chamber pot inside. \"I just don't feel at home without my chamber pot,\" she exclaimed, and it was the first item to find a permanent place under the divan.",
+        "analysis": "0.44005470",
+        "analysis_comment": "Neutral"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 20,
+    "fields": {
+        "user": 2,
+        "date": "1942-09-27T12:00:00Z",
+        "content": "It's so funny to see how quickly Mrs. van Daan flushes. I don't, and it secredy annoys her no end.",
+        "analysis": "0.68656870",
+        "analysis_comment": "Happy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 21,
+    "fields": {
+        "user": 2,
+        "date": "1942-10-01T12:00:00Z",
+        "content": "Yesterday I had a horrible fright. At eight o'clock the doorbell suddenly rang. All I could think of was that someone was coming to get us, you know who I mean. But I calmed down when everybody swore it must have been either pranksters or the mailman.",
+        "analysis": "0.04816964",
+        "analysis_comment": "Very Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 22,
+    "fields": {
+        "user": 2,
+        "date": "1942-10-03T12:00:00Z",
+        "content": "Everybody teased me quite a bit yesterday because I lay down on the bed next to Mr. van Daan. \"At your age! Shocking! \" and other remarks along those lines. Silly, of course. I'd never want to sleep with Mr. van Daan the way they mean.",
+        "analysis": "0.85072600",
+        "analysis_comment": "Very Happy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 23,
+    "fields": {
+        "user": 2,
+        "date": "1942-10-14T12:00:00Z",
+        "content": "I'm terribly busy. Yesterday I began by translating a chapter from La Belle Nivemaise and writing down vocabulary words. Then I worked on an awful math problem and translated three pages of French grammar besides. Today, French grammar and history. I simply refuse to do that wretched math every day. Daddy thinks it's awful too.",
+        "analysis": "0.06149819",
+        "analysis_comment": "Very Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 24,
+    "fields": {
+        "user": 2,
+        "date": "1942-10-29T12:00:00Z",
+        "content": "I'm very worried. Father's sick. He's covered with spots and has a high temperature. It looks like measles. Just think, we can't even call a doctor! Mother is making him perspire in hopes of sweating out the fever.",
+        "analysis": "0.05520451",
+        "analysis_comment": "Very Unhappy"
+    }
+},
+{
+    "model": "journal.journal",
+    "pk": 25,
+    "fields": {
+        "user": 2,
+        "date": "1942-11-20T12:00:00Z",
+        "content": "No matter what I'm doing, I can't help thinking about those who are gone. I catch myself laughing and remember that it's a disgrace to be so cheerful. But am I supposed to spend the whole day crying? No, I can't do that. This gloom will pass.",
+        "analysis": "0.04109347",
+        "analysis_comment": "Very Unhappy"
+    }
+}
+]
