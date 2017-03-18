@@ -96,3 +96,4 @@ static/
 
 # media files
 media/
+!media/fixtures/
