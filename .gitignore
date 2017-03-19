@@ -95,5 +95,5 @@ ENV/
 static/
 
 # media files
-media/
+media/*
 !media/fixtures/
