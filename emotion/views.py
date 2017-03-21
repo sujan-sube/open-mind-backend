@@ -2,9 +2,10 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from emotion.serializers import EmotionSerializer
 from emotion.models import Emotion
+from emotion.models import Expression
 
 # imports for emotion analytics
-import requests, io
+import requests, io, json
 from PIL import Image
 
 class EmotionViewSet(viewsets.ModelViewSet):
@@ -16,7 +17,7 @@ class EmotionViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
       queryset = Emotion.objects.filter(user=self.request.user)
-      return queryset.order_by('-date').values('date', 'id', 'image', 'user')
+      return queryset.order_by('-date')
 
     def create(self, request):
       serializer = self.get_serializer(data=request.data)
@@ -24,7 +25,9 @@ class EmotionViewSet(viewsets.ModelViewSet):
       if serializer.is_valid():
         # obtain analysis from microsoft emotion api
         analysis = emotionanalysis(request.FILES['image'])
-        serializer.save(user=self.request.user)
+        emotion = serializer.save(user=self.request.user)
+        expression = Expression.objects.create(emotion=emotion, **analysis)
+        expression.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
       else:
@@ -34,7 +37,7 @@ class EmotionViewSet(viewsets.ModelViewSet):
 
 def emotionanalysis(image):
 
-  url = 'http://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize'
+  url = 'https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize'
   headers = {
       # Request headers
       'Content-Type': 'application/octet-stream',
@@ -46,8 +49,7 @@ def emotionanalysis(image):
   pil_image.save(output, format='JPEG')
   hex_data = output.getvalue()
   res = requests.post(url=url, data=hex_data, headers=headers)
-  
-  # { "statusCode": 404, "message": "Resource not found" }
-  # above error happens from within DRF, but does not occur in standalone script
-  print(res.text)
+  res_json = json.loads(res.text)[0]['scores']
+
+  return res_json
 

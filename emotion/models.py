@@ -10,7 +10,7 @@ class Emotion(models.Model):
   date = models.DateTimeField(default=timezone.now)
 
 class Expression(models.Model):
-  emotion_id = models.OneToOneField('Emotion', on_delete=CASCADE)
+  emotion = models.OneToOneField('Emotion', on_delete=CASCADE)
   anger = models.DecimalField(max_digits=13, decimal_places=12)
   contempt = models.DecimalField(max_digits=13, decimal_places=12)
   disgust = models.DecimalField(max_digits=13, decimal_places=12)
@@ -18,4 +18,4 @@ class Expression(models.Model):
   happiness = models.DecimalField(max_digits=13, decimal_places=12)
   neutral = models.DecimalField(max_digits=13, decimal_places=12)
   sadness = models.DecimalField(max_digits=13, decimal_places=12)
-  suprise = models.DecimalField(max_digits=13, decimal_places=12)
+  surprise = models.DecimalField(max_digits=13, decimal_places=12)
