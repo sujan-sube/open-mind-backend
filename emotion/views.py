@@ -24,10 +24,16 @@ class EmotionViewSet(viewsets.ModelViewSet):
 
       if serializer.is_valid():
         # obtain analysis from microsoft emotion api
-        analysis = emotionanalysis(request.FILES['image'])
-        emotion = serializer.save(user=self.request.user)
-        expression = Expression.objects.create(emotion=emotion, **analysis)
-        expression.save()
+        analysis, max_expression = emotionanalysis(request.FILES['image'])
+        emotion = serializer.save(user=self.request.user, max_expression=max_expression)
+
+        # create expression object using scores from microsoft api
+        try:
+          expression = Expression.objects.create(emotion=emotion, **analysis)
+          expression.save()
+        except Exception as e:
+          print("Error creating Expression object!")
+        
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
       else:
@@ -37,6 +43,8 @@ class EmotionViewSet(viewsets.ModelViewSet):
 
 def emotionanalysis(image):
 
+  res_json = None
+
   url = 'https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize'
   headers = {
       # Request headers
@@ -44,12 +52,22 @@ def emotionanalysis(image):
       'Ocp-Apim-Subscription-Key': 'cce223c7151c4bcf889e50b16385b0bf',
   }
 
-  pil_image = Image.open(image)
-  output = io.BytesIO()
-  pil_image.save(output, format='JPEG')
-  hex_data = output.getvalue()
-  res = requests.post(url=url, data=hex_data, headers=headers)
-  res_json = json.loads(res.text)[0]['scores']
+  try:
+    pil_image = Image.open(image)
+    output = io.BytesIO()
+    pil_image.save(output, format='JPEG')
+    hex_data = output.getvalue()
+    res = requests.post(url=url, data=hex_data, headers=headers)
+    res_json = json.loads(res.text)[0]['scores']
+  except Exception as e:
+    print("Error with Microsoft Cognitive Services Emotion Analytics API!")
 
-  return res_json
+  max_expression = findmax(res_json)
+  return res_json, max_expression
 
+
+def findmax(in_dict):
+  if in_dict is not None:
+    return max(in_dict, key=lambda key: in_dict[key])
+  else:
+    return None
