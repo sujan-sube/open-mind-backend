@@ -170,7 +170,45 @@ Request Response:
     ]
 }
 ```
+### 6. Emotion
+#### Endpoint: `/emotion/`
+**! Requires Authenticated User**
 
+Methods: `[Get, Post]`
+
+Request Header `[Get, Post]`:
+```javascript
+Authorization: Token {Token}
+```
+Request Body `[Get]`: `None`
+
+Request Response `[Get]`:
+```javascript
+{
+    "count": {number of items},
+    "next": "{url to next page}",
+    "previous": "{url to next page}",
+    "results": [
+        {array of emotion entries}
+    ]
+}
+```
+Request Body `[Post]`:
+```javascript
+Type: form-data
+    date = {date},
+    image = {image file}
+```
+Response `[Post]`:
+```javascript
+{
+    "user": "{user primary key}",
+    "date": "{date}",
+    "image": "{image url}",
+    "max_expression": {expression with max score},
+    "expressions": {dictionary of expression-score values}
+}
+```
 ## Django Fixtures
 Django fixtures saves the contents of a database into a json file. The json file can then be loaded to restore the data to the database.
 
