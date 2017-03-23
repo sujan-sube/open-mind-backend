@@ -1,8 +1,8 @@
-from rest_framework import viewsets, status
+from rest_framework import viewsets, status, filters
 from rest_framework.response import Response
 from emotion.serializers import EmotionSerializer
-from emotion.models import Emotion
-from emotion.models import Expression
+from emotion.models import Emotion, Expression
+from emotion.filters import EmotionFilter
 
 # imports for emotion analytics
 import requests, io, json
@@ -14,6 +14,8 @@ class EmotionViewSet(viewsets.ModelViewSet):
     """
     queryset = Emotion.objects.all().order_by('-date')
     serializer_class = EmotionSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_class = EmotionFilter
 
     def get_queryset(self):
       queryset = Emotion.objects.filter(user=self.request.user)
