@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from rest_framework import routers
 from journal.views import JournalViewSet
@@ -32,8 +34,8 @@ urlpatterns = [
     # api auth
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
-    url(r'^rest-auth/google/$', GoogleLogin.as_view(), name='google_login'),
+    url(r'^rest-auth/google/$', GoogleLogin.as_view(), name='google-login'),
 
     # admin pages
     url(r'^admin/', admin.site.urls)
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

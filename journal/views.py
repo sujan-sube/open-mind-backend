@@ -75,6 +75,10 @@ def textanalysis(content):
       # print("[Errno {0}] {1}".format(e.errno, e.strerror))
       print("Error with Microsoft Cognitive Services Text Analytics API!")
 
+  # set minimum threshold for score
+  if score < 0.1:
+    score = 0.1
+
   return score
 
 
