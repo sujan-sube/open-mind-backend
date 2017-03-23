@@ -196,7 +196,7 @@ Request Response `[Get]`:
 Request Body `[Post]`:
 ```javascript
 Type: form-data
-    date = {date},
+    date = {date}
     image = {image file}
 ```
 Response `[Post]`:
@@ -205,8 +205,56 @@ Response `[Post]`:
     "user": "{user primary key}",
     "date": "{date}",
     "image": "{image url}",
-    "max_expression": {expression with max score},
+    "max_expression": "{expression with the max score value}",
     "expressions": {dictionary of expression-score values}
+}
+```
+#### Endpoint: `/emotion/?date={date}`
+**! Requires Authenticated User**
+
+**{date} format: YYYY-MM-DD**
+
+Methods: `[Get]`
+
+Request Header:
+```javascript
+Authorization: Token {Token}
+```
+Request Body: `None`
+
+Request Response:
+```javascript
+{
+    "count": {number of items},
+    "next": "{url to next page}",
+    "previous": "{url to next page}",
+    "results": [
+        {array of emotion entries}
+    ]
+}
+```
+#### Endpoint: `/emotion/?daterange_0={date}&daterange_1={date}`
+**! Requires Authenticated User**
+
+**{date} format: YYYY-MM-DD**
+
+Methods: `[Get]`
+
+Request Header:
+```javascript
+Authorization: Token {Token}
+```
+Request Body: `None`
+
+Request Response:
+```javascript
+{
+    "count": {number of items},
+    "next": "{url to next page}",
+    "previous": "{url to next page}",
+    "results": [
+        {array of emotion entries}
+    ]
 }
 ```
 ## Django Fixtures
