@@ -21,6 +21,7 @@ from rest_framework import routers
 from journal.views import JournalViewSet
 from emotion.views import EmotionViewSet
 from journal.views_social import GoogleLogin
+from googleauth.views import GoogleAuth
 
 router = routers.DefaultRouter()
 router.register(r'journal', JournalViewSet)
@@ -34,7 +35,8 @@ urlpatterns = [
     # api auth
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
-    url(r'^rest-auth/google/$', GoogleLogin.as_view(), name='google-login'),
+    url(r'^rest-auth/googlecode/$', GoogleLogin.as_view(), name='google-authcode-login'),
+    url(r'^rest-auth/google/$', GoogleAuth.as_view(), name='google-idtoken-login'),
 
     # admin pages
     url(r'^admin/', admin.site.urls)
