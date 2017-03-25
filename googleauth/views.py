@@ -9,7 +9,7 @@ class GoogleAuth(APIView):
     
     permission_classes = (IsAuthenticated,)
 
-    def get(self):
+    def get(self, request):
         return Response(status.HTTP_200_OK)
 
     def post(self, request):
