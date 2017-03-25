@@ -22,18 +22,3 @@ class Expression(models.Model):
   neutral = models.DecimalField(max_digits=13, decimal_places=12)
   sadness = models.DecimalField(max_digits=13, decimal_places=12)
   surprise = models.DecimalField(max_digits=13, decimal_places=12)
-
-
-  # def __str__(self):
-  #   score_dict = { 'anger': float(self.anger),
-  #                  'contempt': float(self.contempt),
-  #                  'disgust': float(self.disgust),
-  #                  'fear': float(self.fear),
-  #                  'happiness': float(self.happiness),
-  #                  'neutral': float(self.neutral),
-  #                  'sadness': float(self.sadness),
-  #                  'surprise': float(self.surprise) 
-  #                }
-  #   max_expression = max(score_dict, key=lambda key: score_dict[key])
-  #   return max_expression
-  

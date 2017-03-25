@@ -25,7 +25,7 @@ class JournalViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
       queryset = Journal.objects.filter(user=self.request.user)
-      return queryset.order_by('-date').values('date', 'id', 'user', 'content', 'analysis', 'analysis_comment')
+      return queryset.order_by('-date')
 
     def create(self, request):
       serializer = self.get_serializer(data=request.data)
