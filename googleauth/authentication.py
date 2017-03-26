@@ -12,7 +12,7 @@ class GoogleIdAuthentication(authentication.BaseAuthentication):
 
         # try verifying token with google
         try:
-            idinfo = client.verify_id_token(request.data['token'], None)
+            idinfo = client.verify_id_token(token, None)
 
             if idinfo['iss'] not in ['accounts.google.com', 'https://accounts.google.com']:
                 raise crypt.AppIdentityError("Wrong issuer.")
