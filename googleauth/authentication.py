@@ -19,7 +19,6 @@ class GoogleIdAuthentication(authentication.BaseAuthentication):
 
             # userid = idinfo['sub']
             email = idinfo['email']
-            print(email)
 
         except crypt.AppIdentityError:
             print("Invalid Token!")
