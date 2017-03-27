@@ -5,4 +5,4 @@ from insight.models import Insight
 class InsightSerializer(serializers.ModelSerializer):
   class Meta:
     model = Insight
-    exclude = ('id',)
+    exclude = ('id', 'user')
