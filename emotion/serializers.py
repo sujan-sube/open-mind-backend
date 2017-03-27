@@ -8,7 +8,6 @@ class ExpressionSerializer(serializers.ModelSerializer):
     exclude = ('id', 'emotion',)
 
 class EmotionSerializer(serializers.ModelSerializer):
-  user = serializers.StringRelatedField(many=False)
   image = serializers.ImageField(max_length=None, use_url=True)
   expressions = ExpressionSerializer(many=False, read_only=True)
 
