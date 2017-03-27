@@ -20,12 +20,14 @@ from django.contrib import admin
 from rest_framework import routers
 from journal.views import JournalViewSet
 from emotion.views import EmotionViewSet
+from insight.views import InsightViewSet
 from journal.views_social import GoogleLogin
 from googleauth.views import GoogleAuth
 
 router = routers.DefaultRouter()
 router.register(r'journal', JournalViewSet)
 router.register(r'emotion', EmotionViewSet)
+router.register(r'insight', InsightViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

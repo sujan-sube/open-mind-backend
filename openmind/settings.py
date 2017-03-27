@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'journal',
     'emotion',
+    'insight',
     'googleauth'
 ]
 
@@ -158,7 +159,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'googleauth.authentication.GoogleIdAuthentication',
-        # 'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',

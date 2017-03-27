@@ -2,8 +2,6 @@ from django.db import models
 from django.utils import timezone
 from django.db.models import SET_NULL, CASCADE
 
-import json
-
 # Create your models here.
 class Emotion(models.Model):
   id = models.AutoField(primary_key=True)
