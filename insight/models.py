@@ -5,6 +5,7 @@ from django.db.models import SET_NULL
 # Create your models here.
 class Insight(models.Model):
     TOPIC_CHOICES = (
+        ('general', 'General'),
         ('emotion', 'Emotion'),
         ('physical', 'Physical Activity'),
         ('sleep', 'Sleep Activity'),
@@ -15,4 +16,4 @@ class Insight(models.Model):
     date = models.DateTimeField(default=timezone.now)
     info = models.CharField(max_length=200)
     detail = models.TextField()
-    topic = models.CharField(max_length=25, choices=TOPIC_CHOICES)
+    topic = models.CharField(max_length=25, choices=TOPIC_CHOICES, default='general')
