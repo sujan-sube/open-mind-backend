@@ -10,16 +10,13 @@ Request Header: `None`
 Request Body: 
 ```javascript
 { 
-    "access_token": "",
-    "code": "{serverAuthCode}"
+    "token": {id token from Google},
 }
 ```
 
 Response:
-```javascript
-{ 
-    "key": "{token}"
-}
+```
+200
 ```
 ### 2. Local Registration
 #### Endpoint: `/rest-auth/registration/`
@@ -68,7 +65,7 @@ Methods: `[Get]`
 
 Request Header:
 ```
-Authorization: Token {Token}
+token: {id token from google}
 ```
 Request Body: `None`
 
@@ -90,7 +87,7 @@ Methods: `[Get, Post]`
 
 Request Header `[Get, Post]`:
 ```javascript
-Authorization: Token {Token}
+token: {id token from google}
 ```
 Request Body `[Get]`: `None`
 
@@ -131,7 +128,7 @@ Methods: `[Get]`
 
 Request Header:
 ```javascript
-Authorization: Token {Token}
+token: {id token from google}
 ```
 Request Body: `None`
 
@@ -155,7 +152,7 @@ Methods: `[Get]`
 
 Request Header:
 ```javascript
-Authorization: Token {Token}
+token: {id token from google}
 ```
 Request Body: `None`
 
@@ -178,7 +175,7 @@ Methods: `[Get, Post]`
 
 Request Header `[Get, Post]`:
 ```javascript
-Authorization: Token {Token}
+token: {id token from google}
 ```
 Request Body `[Get]`: `None`
 
@@ -218,7 +215,7 @@ Methods: `[Get]`
 
 Request Header:
 ```javascript
-Authorization: Token {Token}
+token: {id token from google}
 ```
 Request Body: `None`
 
@@ -242,7 +239,7 @@ Methods: `[Get]`
 
 Request Header:
 ```javascript
-Authorization: Token {Token}
+token: {id token from google}
 ```
 Request Body: `None`
 

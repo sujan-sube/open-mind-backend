@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'autofixture',
     'crispy_forms',
     'journal',
-    'emotion'
+    'emotion',
+    'googleauth'
 ]
 
 MIDDLEWARE = [
@@ -156,6 +157,7 @@ REST_FRAMEWORK = {
         # 'rest_framework.permissions.AllowAny',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'googleauth.authentication.GoogleIdAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_RENDERER_CLASSES': [
@@ -190,6 +192,9 @@ SOCIALACCOUNT_PROVIDERS = {
 
 # Google Social Auth
 GOOGLE_AUTH_CALLBACK_URL = 'http://127.0.0.1:8000/'
+
+# Client ID of iOS App
+CLIENT_ID = '244090642066-03iqlpq54om9u4da4hu6gfkbno10pqlb.apps.googleusercontent.com'
 
 # fixtures settings
 FIXTURE_DIRS = (
