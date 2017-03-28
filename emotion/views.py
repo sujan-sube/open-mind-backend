@@ -64,14 +64,21 @@ def emotionanalysis(image):
             break
     exif=dict(pil_image._getexif().items())
 
-    if exif[orientation] == 3:
-        pil_image=pil_image.rotate(180, expand=True)
-    elif exif[orientation] == 6:
-        pil_image=pil_image.rotate(270, expand=True)
-    elif exif[orientation] == 8:
-        pil_image=pil_image.rotate(90, expand=True)
+    if exif:
+      if exif[orientation] == 3:
+          pil_image=pil_image.rotate(180, expand=True)
+          print("Image: Flipped")
+      elif exif[orientation] == 6:
+          pil_image=pil_image.rotate(270, expand=True)
+          print("Image: Rotated right 90")
+      elif exif[orientation] == 8:
+          pil_image=pil_image.rotate(90, expand=True)
+          print("Image: Rotated left 90")
+  except Exception as e:
+    print("Error with loading image or orientation of image.")
+    print(e)
 
-
+  try:
     # send request
     output = io.BytesIO()
     pil_image.save(output, format='JPEG')
