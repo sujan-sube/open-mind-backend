@@ -1,0 +1,77 @@
+[
+{
+    "model": "emotion.emotion",
+    "pk": 1,
+    "fields": {
+        "user": 10,
+        "image": "fixtures/happy-2.jpeg",
+        "date": "2017-03-21T23:30:00Z",
+        "max_expression": "happiness"
+    }
+},
+{
+    "model": "emotion.emotion",
+    "pk": 2,
+    "fields": {
+        "user": 10,
+        "image": "fixtures/happy-1_zHuyDwt.jpeg",
+        "date": "2017-03-20T23:30:00Z",
+        "max_expression": "happiness"
+    }
+},
+{
+    "model": "emotion.emotion",
+    "pk": 3,
+    "fields": {
+        "user": 10,
+        "image": "fixtures/happy-3_UbSaNHJ.jpeg",
+        "date": "2017-03-25T23:30:00Z",
+        "max_expression": "happiness"
+    }
+},
+{
+    "model": "emotion.expression",
+    "pk": 1,
+    "fields": {
+        "emotion": 1,
+        "anger": "1.99416E-7",
+        "contempt": "1.8E-11",
+        "disgust": "1.6717E-8",
+        "fear": "4.836E-9",
+        "happiness": "0.999999464000",
+        "neutral": "3.1E-11",
+        "sadness": "9.42E-10",
+        "surprise": "2.85367E-7"
+    }
+},
+{
+    "model": "emotion.expression",
+    "pk": 2,
+    "fields": {
+        "emotion": 2,
+        "anger": "0.000033457590",
+        "contempt": "3.32010E-7",
+        "disgust": "0.000093612820",
+        "fear": "0.000005341306",
+        "happiness": "0.999835134000",
+        "neutral": "0.000007189323",
+        "sadness": "0.000002138896",
+        "surprise": "0.000022795388"
+    }
+},
+{
+    "model": "emotion.expression",
+    "pk": 3,
+    "fields": {
+        "emotion": 3,
+        "anger": "6.61E-10",
+        "contempt": "1E-12",
+        "disgust": "3.263E-9",
+        "fear": "1E-12",
+        "happiness": "1.000000000000",
+        "neutral": "1.35E-10",
+        "sadness": "1.25E-10",
+        "surprise": "3.2E-11"
+    }
+}
+]
