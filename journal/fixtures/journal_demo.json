@@ -6,7 +6,7 @@
         "user": 12,
         "date": "2017-02-02T21:00:00Z",
         "content": "Today, I had my calculus midterm and found it very tough. I feel bad that I did not study hard enough for it. I wish I did not have back-to-back midterms.",
-        "analysis": "0.00631865",
+        "analysis": "0.1",
         "analysis_comment": "Very Unhappy"
     }
 },
@@ -17,7 +17,7 @@
         "user": 12,
         "date": "2017-02-03T21:30:00Z",
         "content": "My chemistry midterm today was even worse than my calculus midterm yesterday. I feel horrible and just want this week to be over.",
-        "analysis": "0.00090946",
+        "analysis": "0.1",
         "analysis_comment": "Very Unhappy"
     }
 },
