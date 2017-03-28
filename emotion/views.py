@@ -6,7 +6,7 @@ from emotion.filters import EmotionFilter
 from django.conf import settings
 # imports for emotion analytics
 import requests, io, json, time
-from PIL import Image
+from PIL import Image, ExifTags
 
 class EmotionViewSet(viewsets.ModelViewSet):
     """
@@ -56,11 +56,25 @@ def emotionanalysis(image):
 
   try:
     pil_image = Image.open(image)
-    width, height = pil_image.size
-    pil_image = pil_image.resize((360, 360), Image.ANTIALIAS).rotate(-90)
+
+    # auto rotate for iphone pics
+    for orientation in ExifTags.TAGS.keys():
+        if ExifTags.TAGS[orientation]=='Orientation':
+            break
+    exif=dict(pil_image._getexif().items())
+
+    if exif[orientation] == 3:
+        pil_image=pil_image.rotate(180, expand=True)
+    elif exif[orientation] == 6:
+        pil_image=pil_image.rotate(270, expand=True)
+    elif exif[orientation] == 8:
+        pil_image=pil_image.rotate(90, expand=True)
+
+
+    # pil_image = pil_image.resize((360, 360), Image.ANTIALIAS).rotate(-90)
     output = io.BytesIO()
-    pil_image.save(output, format='JPEG', optimize=True, quality=25)
-    # pil_image.save(settings.MEDIA_ROOT+'1.jpg', format='JPEG', optimize=True, quality=25)
+    pil_image.save(output, format='JPEG')
+    pil_image.save(settings.MEDIA_ROOT+'1.jpg', format='JPEG')
     hex_data = output.getvalue()
     res = requests.post(url=url, data=hex_data, headers=headers, timeout=None)
     print(pil_image.size)
