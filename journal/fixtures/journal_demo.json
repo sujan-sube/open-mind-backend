@@ -3,7 +3,7 @@
     "model": "journal.journal",
     "pk": 1,
     "fields": {
-        "user": 2,
+        "user": 103949256240916656944,
         "date": "2017-02-02T21:00:00Z",
         "content": "Today, I had my calculus midterm and found it very tough. I feel bad that I did not study hard enough for it. I wish I did not have back-to-back midterms.",
         "analysis": "0.00631865",
@@ -14,7 +14,7 @@
     "model": "journal.journal",
     "pk": 2,
     "fields": {
-        "user": 2,
+        "user": 103949256240916656944,
         "date": "2017-02-03T21:30:00Z",
         "content": "My chemistry midterm today was even worse than my calculus midterm yesterday. I feel horrible and just want this week to be over.",
         "analysis": "0.00090946",
@@ -25,7 +25,7 @@
     "model": "journal.journal",
     "pk": 3,
     "fields": {
-        "user": 2,
+        "user": 111479979959951733759,
         "date": "2017-02-04T20:30:00Z",
         "content": "It's finally the weekend and my friends cheered me up and made me forget about the past midterms. I'm grateful for having such close friends!",
         "analysis": "0.80765570",
@@ -36,7 +36,7 @@
     "model": "journal.journal",
     "pk": 4,
     "fields": {
-        "user": 2,
+        "user": 111479979959951733759,
         "date": "2017-02-05T18:30:00Z",
         "content": "I'm going to try my best to finish working on the assignment due tomorrow. I've struggled with keeping up with the workload this term but I feel like that working in groups will get me through the term.",
         "analysis": "0.44366160",
@@ -47,7 +47,7 @@
     "model": "journal.journal",
     "pk": 5,
     "fields": {
-        "user": 2,
+        "user": 111479979959951733759,
         "date": "2017-02-06T18:30:00Z",
         "content": "I've handed in my assignment and felt great that I got it done. But, today was also the day we got back our physics midterm and I borderline passed.",
         "analysis": "0.67431780",

@@ -5,7 +5,7 @@ from emotion.models import Emotion, Expression
 class ExpressionSerializer(serializers.ModelSerializer):
   class Meta:
     model = Expression
-    exclude = ('emotion',)
+    exclude = ('id', 'emotion',)
 
 class EmotionSerializer(serializers.ModelSerializer):
   image = serializers.ImageField(max_length=None, use_url=True)
