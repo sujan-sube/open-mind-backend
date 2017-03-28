@@ -3,9 +3,9 @@ from rest_framework.response import Response
 from emotion.serializers import EmotionSerializer
 from emotion.models import Emotion, Expression
 from emotion.filters import EmotionFilter
-
+from django.conf import settings
 # imports for emotion analytics
-import requests, io, json
+import requests, io, json, time
 from PIL import Image
 
 class EmotionViewSet(viewsets.ModelViewSet):
@@ -56,13 +56,19 @@ def emotionanalysis(image):
 
   try:
     pil_image = Image.open(image)
+    width, height = pil_image.size
+    pil_image = pil_image.resize((360, 360), Image.ANTIALIAS).rotate(-90)
     output = io.BytesIO()
-    pil_image.save(output, format='JPEG')
+    pil_image.save(output, format='JPEG', optimize=True, quality=25)
+    # pil_image.save(settings.MEDIA_ROOT+'1.jpg', format='JPEG', optimize=True, quality=25)
     hex_data = output.getvalue()
-    res = requests.post(url=url, data=hex_data, headers=headers)
+    res = requests.post(url=url, data=hex_data, headers=headers, timeout=None)
+    print(pil_image.size)
+    print(res.text)
     res_json = json.loads(res.text)[0]['scores']
   except Exception as e:
     print("Error with Microsoft Cognitive Services Emotion Analytics API!")
+    print(e)
 
   max_expression = findmax(res_json)
   return res_json, max_expression
