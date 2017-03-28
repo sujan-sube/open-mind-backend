@@ -75,6 +75,7 @@ def emotionanalysis(image):
     # send request
     output = io.BytesIO()
     pil_image.save(output, format='JPEG')
+    # pil_image.save(settings.MEDIA_ROOT+'1.jpg')
     hex_data = output.getvalue()
     res = requests.post(url=url, data=hex_data, headers=headers, timeout=None)
     res_json = json.loads(res.text)[0]['scores']
