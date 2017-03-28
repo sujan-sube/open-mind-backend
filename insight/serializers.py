@@ -4,7 +4,7 @@ from insight.models import Insight
 
 class InsightSerializer(serializers.ModelSerializer):
     topic = serializers.SerializerMethodField()
-    date = serializers.DateTimeField(format="%Y-%m-%dT%H:%M:%SZ")
+    date = serializers.DateTimeField(format="%Y-%m-%dT%H:%M:%SZ", required=False)
 
     class Meta:
         model = Insight

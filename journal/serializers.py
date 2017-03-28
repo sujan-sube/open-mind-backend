@@ -4,7 +4,7 @@ from journal.models import Journal
 from datetime import datetime
 
 class JournalSerializer(serializers.ModelSerializer):
-    date = serializers.DateTimeField(format="%Y-%m-%dT%H:%M:%SZ")
+    date = serializers.DateTimeField(format="%Y-%m-%dT%H:%M:%SZ", required=False)
 
     class Meta:
         model = Journal
