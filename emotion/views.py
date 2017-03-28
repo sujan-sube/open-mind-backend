@@ -27,19 +27,20 @@ class EmotionViewSet(viewsets.ModelViewSet):
       if serializer.is_valid():
         # obtain analysis from microsoft emotion api
         analysis, max_expression = emotionanalysis(request.FILES['image'])
-        emotion = serializer.save(user=self.request.user, max_expression=max_expression)
+        if analysis is not None:
+          emotion = serializer.save(user=self.request.user, max_expression=max_expression)
 
-        # create expression object using scores from microsoft api
-        try:
-          expression = Expression.objects.create(emotion=emotion, **analysis)
-          expression.save()
-        except Exception as e:
-          print("Error creating Expression object!")
+          # create expression object using scores from microsoft api
+          try:
+            expression = Expression.objects.create(emotion=emotion, **analysis)
+            expression.save()
+          except Exception as e:
+            print("Error creating Expression object!")
+            print(e)
         
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+          return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-      else:
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+      return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 
 
@@ -71,14 +72,11 @@ def emotionanalysis(image):
         pil_image=pil_image.rotate(90, expand=True)
 
 
-    # pil_image = pil_image.resize((360, 360), Image.ANTIALIAS).rotate(-90)
+    # send request
     output = io.BytesIO()
     pil_image.save(output, format='JPEG')
-    pil_image.save(settings.MEDIA_ROOT+'1.jpg', format='JPEG')
     hex_data = output.getvalue()
     res = requests.post(url=url, data=hex_data, headers=headers, timeout=None)
-    print(pil_image.size)
-    print(res.text)
     res_json = json.loads(res.text)[0]['scores']
   except Exception as e:
     print("Error with Microsoft Cognitive Services Emotion Analytics API!")
