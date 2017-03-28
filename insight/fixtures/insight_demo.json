@@ -1,0 +1,57 @@
+[
+{
+    "model": "insight.insight",
+    "pk": 1,
+    "fields": {
+        "user": 12,
+        "date": "2017-03-27T21:29:24Z",
+        "info": "Not enough physical activity",
+        "detail": "Your physical activity is a little lower than usual today, you should go for a run around your neighbourhood.\r\n\r\nVisit this website to plan your run:  http://www.geodistance.com/",
+        "topic": "physical"
+    }
+},
+{
+    "model": "insight.insight",
+    "pk": 2,
+    "fields": {
+        "user": 12,
+        "date": "2017-03-27T21:30:08Z",
+        "info": "Try planning your sleep",
+        "detail": "Your don't seem to have been getting enough sleep for the last couple of days. How about taking a nap for a few hours today.",
+        "topic": "sleep"
+    }
+},
+{
+    "model": "insight.insight",
+    "pk": 3,
+    "fields": {
+        "user": 10,
+        "date": "2017-03-27T21:30:34Z",
+        "info": "Keep up the good work!",
+        "detail": "You have had a positive journal entry. \r\n\r\nPlease have a look at this journalling information to further improve your mental health: https://www.urmc.rochester.edu/encyclopedia/content.aspx?ContentTypeID=1&ContentID=4552",
+        "topic": "emotion"
+    }
+},
+{
+    "model": "insight.insight",
+    "pk": 4,
+    "fields": {
+        "user": 12,
+        "date": "2017-03-28T06:13:02Z",
+        "info": "Are you feeling sad?",
+        "detail": "Your journal entry shows that you are sad.\r\n\r\nYou can visit this website to improve your mental health: https://www.urmc.rochester.edu/encyclopedia/content.aspx?ContentTypeID=1&ContentID=4552",
+        "topic": "emotion"
+    }
+},
+{
+    "model": "insight.insight",
+    "pk": 5,
+    "fields": {
+        "user": 10,
+        "date": "2017-03-28T06:15:01Z",
+        "info": "Goal Achieved!",
+        "detail": "You had a good amount exercise today!\r\n\r\nPlan your run for tomorrow: \r\n\r\nhttp://www.geodistance.com/",
+        "topic": "physical"
+    }
+}
+]
