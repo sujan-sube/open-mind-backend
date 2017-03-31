@@ -9,7 +9,3 @@ class JournalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Journal
         exclude = ('id', 'user',)
-
-    def get_date(self, obj):
-        print(obj.date.replace(microsecond=0))
-        return None
